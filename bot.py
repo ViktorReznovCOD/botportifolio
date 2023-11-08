@@ -2,8 +2,8 @@ import telebot, requests
 from io import BytesIO
 user = 'ViktorReznovCOD'
 url_users = "http://api.github.com/users/"
-tokengit="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" # 06/11...dura 7 dias
-tokenBot='6973468825:AAFFi385adbJPZiTvo3NXG5OHZ44COpLeNM' ## var 'tokenBot' recebe o token da API, em seguida é passada como parâmetro na criação do objeto 'bot', que recebe telebot.Telebot(tokenBot)
+
+tokenBot= open("tokens.txt","r") ## var 'tokenBot' recebe o token da API, em seguida é passada como parâmetro na criação do objeto 'bot', que recebe telebot.Telebot(tokenBot)
 bot = telebot.TeleBot(tokenBot)
 
 @bot.message_handler(commands=['github','Github'])
